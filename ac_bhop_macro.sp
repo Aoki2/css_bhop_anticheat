@@ -254,7 +254,7 @@ public OnGameFrame()
 		gnTick = 0;
 	}
 		
-	for(pnIndex=1;pnIndex<MaxClients;pnIndex++)
+	for(pnIndex=1;pnIndex<=MaxClients;pnIndex++)
 	{
 		if(ganTicksToLimitSpeed[pnIndex]  > 0 && 
 		   IsClientConnected(pnIndex) && IsClientAuthorized(pnIndex)  &&
@@ -321,7 +321,7 @@ public Action:cbPrintJumpStats(anClient, ahArgs)
 	decl String:ppanPlayerName[92];
 	decl String:ppanPlayerAuth[23];
 
-	for(new lnIndex=1;lnIndex<MaxClients;lnIndex++)
+	for(new lnIndex=1;lnIndex<=MaxClients;lnIndex++)
 	{
 		if(IsClientConnected(lnIndex) && IsClientAuthorized(lnIndex) &&
 		   IsPlayerAlive(lnIndex) && GetClientTeam(lnIndex) > 1)

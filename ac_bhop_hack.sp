@@ -156,7 +156,7 @@ public OnMapStart()
 //-------------------------------------------------------------------------
 GetPlayerNamesAndAuths()
 {
-	for(new i=1;i<MaxClients;i++)
+	for(new i=1;i<=MaxClients;i++)
 	{
 		if(IsClientConnected(i) && IsClientAuthorized(i))
 		{
@@ -480,7 +480,7 @@ public OnGameFrame()
 //-------------------------------------------------------------------------
 public Action:cbPrintJumpStats(anClient, ahArgs)
 {
-	for(new i=1;i<MaxClients;i++)
+	for(new i=1;i<=MaxClients;i++)
 	{
 		if(IsClientConnected(i) && IsClientAuthorized(i) &&
 		   IsPlayerAlive(i) && GetClientTeam(i) > 1)
