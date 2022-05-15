@@ -268,7 +268,7 @@ public OnGameFrame()
 		gnTick = 0;
 	}
 	
-	for(pnClient=1;pnClient<MaxClients;pnClient++)
+	for(pnClient=1;pnClient<=MaxClients;pnClient++)
 	{
 		if(gaePlayerInJump[pnClient] == true && IsClientConnected(pnClient) && 
 		   IsPlayerAlive(pnClient) && !IsFakeClient(pnClient))
@@ -653,7 +653,7 @@ public Action:cbPrintJumpStats(anClient, ahArgs)
 {
 	decl Float:parPlayerPos[3];
 	
-	for(new i=1;i<MaxClients;i++)
+	for(new i=1;i<=MaxClients;i++)
 	{
 		if(IsClientConnected(i) && IsClientAuthorized(i) &&
 		   IsPlayerAlive(i) && GetClientTeam(i) > 1)
@@ -790,7 +790,7 @@ KickClientIfValid(anClient)
 //-------------------------------------------------------------------------
 GetPlayerNamesAndAuths()
 {
-	for(new i=1;i<MaxClients;i++)
+	for(new i=1;i<=MaxClients;i++)
 	{
 		if(IsClientConnected(i) && IsClientAuthorized(i))
 		{
